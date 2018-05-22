@@ -175,18 +175,18 @@ def home(request):
     query = request.GET.get('search_box')
     s = str(query)
     symbol=s.upper()
-    print('symbol',symbol)
-    comany_name = Company.objects.get(ticker=symbol)
-    print('aaaa', comany_name)
+    #print('symbol',symbol)
+    #comany_name = Company.objects.get(ticker=symbol)
+    #print('aaaa', comany_name)
 
-    qs_id = comany_name.simfinId
-    qc = int(qs_id)
-    print('xxxx', qc)
-    indicator = Indicator.objects.filter(Sid=qc)
-    print('indicator', indicator)
+    #qs_id = comany_name.simfinId
+    #qc = int(qs_id)
+    #print('xxxx', qc)
+    #indicator = Indicator.objects.filter(Sid=qc)
+    #print('indicator', indicator)
 
-    company = Company.objects.filter(simfinId=qc)
-    print('company', company)
+    #company = Company.objects.filter(simfinId=qc)
+    #print('company', company)
     # all_company = Company.objects.all()
     main = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol='
 
@@ -325,8 +325,8 @@ def home(request):
             'dataobv': transformed_list_obv,
             'singledata': transformed_single,
             'symbol': symbol,
-            'indicator':indicator,
-            'company':company
+            #'indicator':indicator,
+          #  'company':company
 
         }
         return render(request, "index.html", context)
