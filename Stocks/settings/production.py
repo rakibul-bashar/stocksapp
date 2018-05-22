@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY','8r4d5a514nqal#62%j8ha+e%(&du!z9s)9%*#5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["stockaps.herokuapp.com"]
+ALLOWED_HOSTS = ["stockssap.herokuapp.com"]
 
 # Application definition
 
